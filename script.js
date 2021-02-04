@@ -11,7 +11,6 @@ chose();
 
 
 function chose () {
-    number = 0;
 
     rock.addEventListener("click",  () => {
         playerUno.classList.add("shake");
@@ -33,15 +32,15 @@ function rockc () {
     scis.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");rockc();});
     rock.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");scissorsc();});
     paper.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");paperc();});
-    let number = Math.floor(Math.random() * (4 - 1) + 1)
-    console.log(number);
     document.querySelector(".player.shake").addEventListener("animationend", resultr );
 }
-function resultr (number) {
+function resultr () {
     document.querySelector(".player.shake").removeEventListener("animationend", resultr );
     playerUno.classList.remove("shake");
     playerDos.classList.remove("shake");
-    console.log("papa");
+    number = Math.floor(Math.random() * (4 - 1) + 1)
+    console.log(number);
+
     if ( number == 1 ) {
         playerUno.classList.add("rock");
         playerDos.classList.add("rock");
@@ -70,15 +69,17 @@ function paperc() {
     scis.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");rockc();});
     rock.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");scissorsc();});
     paper.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");paperc();});
-    let numb = Math.floor(Math.random() * (4 - 1) + 1)
-    console.log(numb);
+    
+    
+    
     document.querySelector(".player.shake").addEventListener("animationend", resultp );
 }
 function resultp (numb) {
     document.querySelector(".player.shake").removeEventListener("animationend", resultp );
     playerUno.classList.remove("shake");
     playerDos.classList.remove("shake");
-    console.log("jaja");
+    numb = Math.floor(Math.random() * (4 - 1) + 1)
+    console.log(numb);
     if ( numb == 1 ) {
         playerUno.classList.add("paper");
         playerDos.classList.add("rock");
@@ -107,16 +108,18 @@ function scissorsc () {
     scis.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");rockc();});
     rock.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");scissorsc();});
     paper.removeEventListener("click",  () => {playerUno.classList.add("shake");playerDos.classList.add("shake");paperc();});
-    let numbe = Math.floor(Math.random() * (4 - 1) + 1)
-    console.log(numbe);
+    
+    
+    
     document.querySelector(".player.shake").addEventListener("animationend", results );
 }
 function results ( numbe ) {
     document.querySelector(".player.shake").removeEventListener("animationend", results );
     playerUno.classList.remove("shake");
     playerDos.classList.remove("shake");
+    numbe = Math.floor(Math.random() * (4 - 1) + 1)
+    console.log(numbe);
     
-    console.log("haha");
     if ( numbe == 1 ) {
         playerUno.classList.add("scissors");
         playerDos.classList.add("rock");
